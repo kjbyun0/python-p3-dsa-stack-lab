@@ -5,7 +5,7 @@ class Stack:
         self.limit = limit
 
     def isEmpty(self):
-        return len(self.items) == 0
+        return self.size() == 0
 
     def push(self, item):
         if len(self.items) < self.limit:
@@ -24,11 +24,8 @@ class Stack:
     def size(self):
         return len(self.items)
 
-    def isEmpty(self):
-        return len(self.items) == 0
-
     def full(self):
-        return len(self.items) == self.limit
+        return self.size() == self.limit
 
     def search(self, target):
         depth = 0
